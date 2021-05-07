@@ -13,7 +13,7 @@ exports.anguroozify = functions.https.onRequest(async (req: Request, res: Respon
   res.json({id: writeResult.id});
 });
 
-exports.appendLog = functions.https.onRequest(async (req: Request, res: Response) => {
+exports.logger = functions.https.onRequest(async (req: Request, res: Response) => {
   const {id, logger} = req.body;
   if (logger && logger.length > 0) {
     await db.collection("projects").doc(id).update({
