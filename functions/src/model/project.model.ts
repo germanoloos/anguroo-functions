@@ -3,6 +3,7 @@ export interface AngurooProject {
     id: string;
     name: string;
     type: string;
+    email: string;
     framework: {
         name: string
         props: {
